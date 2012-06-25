@@ -3,6 +3,9 @@
   Learn more ~ http://960.gs/
 
   Licensed under GPL and MIT.
+
+  Convert to less compatible by Adrian Lee
+  email: adrian [at] radianstudio [dot] com
 */
 
 /* `Basic HTML
@@ -27,29 +30,16 @@ hr {
 /* `Headings
 ----------------------------------------------------------------------------------------------------*/
 
-h1 {
-  font-size: 25px;
+.h (@size: 1){
+  font-size: 27px - @size * 2;
 }
 
-h2 {
-  font-size: 23px;
-}
-
-h3 {
-  font-size: 21px;
-}
-
-h4 {
-  font-size: 19px;
-}
-
-h5 {
-  font-size: 17px;
-}
-
-h6 {
-  font-size: 15px;
-}
+h1 { .h(1); }
+h2 { .h(2); }
+h3 { .h(3); }
+h4 { .h(4); }
+h5 { .h(5); }
+h6 { .h(6); }
 
 /* `Spacing
 ----------------------------------------------------------------------------------------------------*/
